@@ -1,5 +1,33 @@
 # Yurak — tanishuv demo
 
+Mobil va kompyuterga mos statik prototip. Sayt GitHub Pages’da joylashishi mumkin.
+
+## Demo ichida ishlaydigan qismlar
+
+- Tanishuv profillarini ko‘rish, o‘tkazib yuborish va yoqtirish.
+- Matchlar va demo suhbatlar.
+- Profil tahrirlash.
+- Zar tashlash va xotira mini-o‘yini.
+- Brauzer `localStorage`’ida saqlash.
+
+## Muhim: bu production xizmat emas
+
+Bu versiya serverga ulanmagan. Profil, match va chat ma’lumotları **faqat shu brauzer va qurilmada** saqlanadi; boshqa foydalanuvchilar bilan onlayn almashilmaydi. Haqiqiy login, telefon/Google autentifikatsiyasi, backend chat, admin panel va global statistika yo‘q. Haqiqiy parol yoki shaxsiy ma’lumotlarni kiritmang.
+
+Haqiqiy ko‘p foydalanuvchili xizmat uchun Firebase/Supabase kabi backend, server tomonda ruxsat tekshiruvi, xavfsizlik qoidalari va maxfiylik siyosati alohida sozlanishi kerak. Admin paroli yoki service-account kalitlarini HTML yoki repozitoriyaga qo‘shmang.
+
+## GitHub Pages’ni yoqish
+
+1. Repozitoriyada **Settings → Pages** ni oching.
+2. **Build and deployment → Source** dan **GitHub Actions** ni tanlang.
+3. **Actions** bo‘limida `Deploy static site to GitHub Pages` workflow muvaffaqiyatтай дууссаны дараа URL нь `https://baburshakh.github.io/Tanishuvlar/` байх ёстой. URL зөв эсэхийг Pages тохиргооноос баталгаажуулна уу.
+4. Workflow автоматаар `main` branch-д push хийхэд ажиллана; мөн Actions tab-аас гараар эхлүүлж болно.
+
+## Xavfsizlik eslatmasi
+
+`localStorage` demo login yoki maxfiy ma’lumot saqlash uchun xavfsiz emas. Ushbu demo login/parol so‘ramaydi. Production’da parollarni faqat ishonchli autentifikatsiya provayderi orqali boshqaring.
+# Yurak — tanishuv demo
+
 Mobilga mos, GitHub Pages’da ishlaydigan tanishuv sayti prototipi. GitHub Actions workflow `main` branch-dagi o‘zgarishlarni avtomatik Pages deploy qiladi.
 
 ## Nima ishlaydi
