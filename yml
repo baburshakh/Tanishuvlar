@@ -1,0 +1,54 @@
+# Yurak — tanishuv va o‘yini app
+
+Bu loyiha mobilga mos tanishuv, chat va mini-o‘yinlar uchun demo frontend bo‘lib, GitHub Pages yordamida tezkor tarzda ishga tushirilishi mumkin.
+
+## Nimalar bor
+
+- Login / register ekranlari
+- Email + parol kirish
+- Google demo kirish
+- Telefon raqam orqali demo SMS kiritish (demo kodi: `123456`)
+- Tanishuv profillari va matchlar
+- Chatlar va xabarlar saqlanishi (`localStorage`)
+- O‘yinlar: zar tashlash va xotira mini o‘yini
+- Admin panel: foydalanuvchilar, online/offline va statuslar
+- GitHub Pages uchun workflow
+
+## Muhim ma’lumot
+
+Bu loyiha hali haqiqiy production backend emas. Real foydalanuvchilar uchun quyidagilar kerak bo‘ladi:
+
+- Firebase Authentication (Email, Google, Phone)
+- Firestore Database
+- Admin roliga ega ma’lumotlar
+- Security rules
+- Hosting / deployment environment
+
+Ushbu demo faqat frontend va lokal ma’lumotlar bazasi (browser storage) ishlatiladi. Real auth va multi-user chat uchun Firebase yoki Supabase kerak.
+
+## GitHub Pages
+
+Repositoryda mavjud `.github/workflows/pages.yml` yangilangan bo‘lib, `main` branchga push qilinganda Pages avtomatik deploy bo‘ladi.
+
+GitHub repo settings bo‘limida:
+
+- Settings → Pages
+- Source: GitHub Actions
+- Saqlab qolish
+
+Agar deployment muvaffaqiyatli bo‘lsa, URL quyidagicha bo‘ladi:
+
+https://baburshakh.github.io/Tanishuvlar/
+
+## Real backendga o‘tish uchun
+
+1. Firebase project yarating.
+2. Authentication bo‘limida Email/Password, Google va Phone provayderlarini yoqing.
+3. Firestore bazasini yaratib, security rules yozing.
+4. `index.html` ichidagi frontend logikasini Firebase SDK bilan almashtiring.
+5. Admin access ni Firestore `admins` kolleksiyasi orqali berish kerak.
+6. `apiKey`, `authDomain`, `projectId`, `appId` qiymatlarini Firebase project ma’lumotlari bilan almashtirish kerak.
+
+## Tavsiya
+
+Agar loyihani haqiqiy online xizmatga aylantirmoqchi bo‘lsangiz, keyingi bosqichda Firebase yoki Supabasega o‘tish lozim. Bu demo faqat saytdagi UI va logika ko‘rinishini ko‘rsatadi.
